@@ -73,12 +73,15 @@ public class MqttCallback implements FacilioMqttCallback {
    }
 }
 ```
+## API Documentation
+
+The API documentation for the SDK can be found [here](https://s3-us-west-2.amazonaws.com/faciliomirror/mqtt-client-java/index.html).
 
 ## RabbitMQ Configuration
 
 ### RabbitMQ Installation:
 
-Install [RabbitMQ](https://www.rabbitmq.com/), if it is not installed already.
+Install [RabbitMQ](https://www.rabbitmq.com/), if it is not installed already. Enable rabbitmq_management and rabbitmq_mqtt plugins.
 
 ### RabbitMQ Management Console:
 
