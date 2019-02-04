@@ -85,7 +85,7 @@ Install [RabbitMQ](https://www.rabbitmq.com/), if it is not installed already. E
 
 ### RabbitMQ Management Console:
 
-After successful installation & running of RabbitMQ, login to RabbitMQ Management console by http://<rabbitMQHostName>:<portNumber>
+After successful installation & running of RabbitMQ, login to RabbitMQ Management console by http://rabbitmq-host:port
 
 * Click on the Queues tab
 	* Create a Queue with the intended Org Domain name.
