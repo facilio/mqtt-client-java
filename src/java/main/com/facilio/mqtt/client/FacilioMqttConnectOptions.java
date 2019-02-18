@@ -2,6 +2,8 @@ package com.facilio.mqtt.client;
 
 import org.eclipse.paho.client.mqttv3.MqttConnectOptions;
 
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.security.KeyStore;
 
 
@@ -40,6 +42,17 @@ public class FacilioMqttConnectOptions extends MqttConnectOptions {
      */
     public void setServerURI(String serverUri) {
         this.serverUri = serverUri;
+        if(serverUri != null && serverUri.endsWith("amazonaws.com")) {
+            try {
+                URI uri = new URI(serverUri);
+                if(uri.getScheme() == null) {
+                    serverUri = "ssl://" + serverUri;
+                }
+            } catch (URISyntaxException e) {
+                throw new IllegalArgumentException(e);
+            }
+
+        }
         setServerURIs(new String[]{serverUri});
     }
 
